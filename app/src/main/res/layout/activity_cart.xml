@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cart_Activity">
+
+    <!--고정-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/cart_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="0dp"
+            app:title="장바구니"
+            app:titleTextColor="@color/white"
+            android:background="#A4C3FF"/>
+    </LinearLayout>
+
+    <!--main View-->
+    <RelativeLayout
+        android:id="@+id/cart_Relative"
+        android:layout_width="match_parent"
+        android:layout_height="810dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="129dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="142dp"
+            android:layout_marginTop="330dp"
+            android:src="@drawable/cart2" />
+
+        <TextView
+            android:layout_width="231dp"
+            android:layout_height="28dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="422dp"
+            android:layout_marginRight="50dp"
+            android:gravity="top"
+            android:text="장바구니에 담긴 식재료가 없습니다." />
+
+
+        <android.widget.Button
+            android:id="@+id/btn_gotoAdd"
+            android:layout_width="249dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="91dp"
+            android:layout_marginTop="456dp"
+            android:background="#A4C3FF"
+            android:text="냉장고에 부족한 식재료 추가하기"
+            android:onClick="gotoAdd_click"/>
+    </RelativeLayout>
+
+<!--    <FrameLayout-->
+<!--        android:id="@+id/main_frame"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="653dp"></FrameLayout>-->
+
+    <!--bottom네비  -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#A4C3FF"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:itemIconTint="@drawable/menu_selector_color"
+        app:itemIconSize="36dp"
+        app:menu="@menu/menu"/>
+
+</RelativeLayout>
